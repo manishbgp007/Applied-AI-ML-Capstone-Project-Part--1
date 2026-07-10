@@ -111,3 +111,39 @@ Data type correction was performed to ensure that each column had the most appro
 * **Outcome**
   * After correcting the data types, the dataset became more efficient in terms of memory usage and computational performance. The corrected data types also ensured compatibility with subsequent preprocessing techniques, exploratory data analysis, feature engineering, and machine learning model development.
 
+
+### Task 5: Descriptive Statistics and Skewness Analysis
+
+Descriptive statistics and skewness analysis were performed to understand the distribution, central tendency, variability, and shape of the numeric features in the dataset. This analysis provided valuable insights into the characteristics of the data and helped determine appropriate preprocessing techniques.
+
+* **Generating Descriptive Statistics** :- 
+The `df.describe()` function was used to generate summary statistics for all numeric columns. The output included the following statistical measures:
+  * **Count:** Number of non-missing observations.
+  * **Mean:** Average value of the feature.
+  * **Standard Deviation (Std):** Measure of data variability.
+  * **Minimum (Min):** Smallest value in the column.
+  * **25th Percentile (Q1):** First quartile.
+  * **50th Percentile (Median):** Middle value of the dataset.
+  * **75th Percentile (Q3):** Third quartile.
+  * **Maximum (Max):** Largest value in the column.
+    
+These statistics provided an overall understanding of the dataset and helped identify unusual values or potential outliers.
+
+* **Computing Skewness**
+  * The skewness of each numeric column was calculated using the `df.skew()` function. Skewness measures the degree of asymmetry in the distribution of data around its mean. The column with the highest absolute skewness was identified because it represents the most unevenly distributed feature in the dataset.
+
+* **Interpretation of Skewness**
+
+* The skewness values were interpreted as follows:
+  * **Positive Skewness:** The distribution has a long right tail, and the mean is generally greater than the median.
+  * **Negative Skewness:** The distribution has a long left tail, and the mean is generally smaller than the median.
+  * **Skewness Close to Zero:** The distribution is approximately symmetric, indicating that the mean and median are relatively close.
+
+* **Importance of Skewness Analysis**
+  * Understanding skewness is important because highly skewed data can influence statistical analysis and machine learning model performance. Features with large positive or negative skewness may require transformations or robust preprocessing techniques before model training.
+
+* **Justification for Median Imputation**
+  * The skewness analysis supported the decision to use the **median** for imputing missing values. Since the median is less affected by extreme values and skewed distributions than the mean, it provides a more reliable estimate of the central tendency for skewed numeric data.
+
+* **Outcome**
+  * The descriptive statistics and skewness analysis provided a comprehensive understanding of the dataset's numerical features. The results helped identify highly skewed variables, supported the choice of median imputation, and established a strong foundation for further exploratory data analysis, feature engineering, and machine learning model development.
