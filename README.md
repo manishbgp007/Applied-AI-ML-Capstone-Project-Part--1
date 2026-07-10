@@ -162,7 +162,7 @@ For each selected numeric column, the following statistical measures were calcul
   * **Third Quartile (Q3):** The 75th percentile of the data.
   * **Interquartile Range (IQR):** The spread of the middle 50% of the data, calculated as:
   
-  **IQR = Q3 − Q1**
+    * **IQR = Q3 − Q1**
   
 The IQR method is a widely used and robust technique for detecting outliers because it is less affected by extreme values than methods based on the mean and standard deviation.
 * **Identifying Outliers**
@@ -312,10 +312,34 @@ These findings helped determine which categories showed the strongest average pe
 
 * **Calculating the Mean Ratio**
   * To evaluate the predictive strength of the categorical feature, the ratio of the **highest group mean** to the **lowest group mean** was calculated.
-  * **Mean Ratio = Highest Group Mean / Lowest Group Mean**
+    * **Mean Ratio = Highest Group Mean / Lowest Group Mean**
 
   * A large ratio suggests that the categories differ substantially in their average values, indicating that the categorical feature may contain useful predictive information for machine learning models. Conversely, a ratio close to 1 implies that the categories are similar and may contribute less predictive value.
 
 * **Outcome**
   * The grouped aggregation analysis demonstrated how the numeric feature varied across different categories. By comparing the mean, standard deviation, and observation count for each group, the analysis highlighted important differences between categories. The calculated mean ratio further indicated whether the categorical variable possesses a meaningful predictive signal, making it a valuable candidate for feature engineering and model development in the next phase of the project.
 
+
+### Task 10: Saving the Cleaned Dataset
+After completing all data preprocessing tasks, including missing value handling, duplicate removal, data type correction, descriptive statistical analysis, outlier detection, correlation analysis, grouped aggregation, and visualization, the final cleaned dataset was prepared for future use.
+
+### 1. Exporting the Cleaned Dataset**
+  * The cleaned dataset was exported as a CSV file named **`cleaned_data.csv`** using the `to_csv()` function in pandas. This file contains the processed version of the original dataset and serves as the input for the next stages of the project.
+
+* **Purpose of Saving the Dataset**
+  * Saving the cleaned dataset provides several advantages:
+
+  * Preserves all preprocessing and cleaning operations.
+  * Eliminates the need to repeat data cleaning in future experiments.
+  * Ensures consistency across different stages of the project.
+  * Makes the dataset ready for feature engineering, model training, and evaluation in Part 2.
+  * Improves reproducibility by allowing others to use the same cleaned dataset.
+
+* **Output File**
+  * The cleaned dataset was saved with the following filename:
+
+    * **`cleaned_data.csv`**
+This file contains the final processed data after handling missing values, removing duplicate records, correcting data types, and completing all exploratory data analysis tasks.
+
+* **Outcome**
+  * The successful export of the cleaned dataset marked the completion of the data preprocessing phase. The resulting **`cleaned_data.csv`** file is clean, consistent, and ready for advanced preprocessing, feature engineering, and machine learning model development in the subsequent parts of the Applied AI & ML Capstone Project.
