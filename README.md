@@ -91,3 +91,23 @@ Duplicate records were analyzed to ensure the dataset contained only unique obse
 * **Outcome**
   * The duplicate detection and removal process improved the overall quality and reliability of the dataset by eliminating redundant records. The cleaned dataset became more suitable for exploratory data analysis, feature engineering, and machine learning model training, reducing the risk of biased results caused by repeated observations.
 
+
+#### Task 4: Data Type Correction
+
+Data type correction was performed to ensure that each column had the most appropriate data type for analysis and machine learning. Incorrect data types can lead to errors during preprocessing, increase memory usage, and reduce computational efficiency. Therefore, verifying and correcting data types is an important step in data preparation.
+
+* **Identifying Incorrect Data Types**
+  * The data types of all columns were examined using the `df.dtypes` command. This inspection helped identify columns that had been assigned inappropriate data types during data import, such as numeric values stored as text (`object`) or categorical variables stored as plain strings.
+
+* **Converting Numeric Columns**
+  * Columns containing numeric values but stored as the `object` data type were converted to appropriate numeric types (`int64` or `float64`) using the `pd.to_numeric()` function. This conversion ensured that mathematical operations, statistical analysis, and machine learning algorithms could process these features correctly.
+
+* **Converting Categorical Columns**
+  * Columns containing repetitive text values (such as categories or labels) were converted from the `object` data type to the `category` data type. Using the categorical data type reduces memory consumption and improves the efficiency of data processing, especially for columns with a limited number of unique values.
+
+* **Memory Usage Comparison**
+  * The memory usage of the dataset was measured before and after performing the data type conversions. The comparison showed that converting repetitive string columns to the `category` data type significantly reduced the overall memory footprint of the dataset while maintaining the same information.
+
+* **Outcome**
+  * After correcting the data types, the dataset became more efficient in terms of memory usage and computational performance. The corrected data types also ensured compatibility with subsequent preprocessing techniques, exploratory data analysis, feature engineering, and machine learning model development.
+
