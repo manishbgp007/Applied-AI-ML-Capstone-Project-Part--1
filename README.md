@@ -70,3 +70,24 @@ Missing value analysis was performed to identify incomplete or unavailable data 
 
 * **Outcome**
   * After imputing the missing values in the eligible numeric columns, the dataset became more complete and suitable for further preprocessing, exploratory data analysis, feature engineering, and machine learning model development.
+ 
+
+#### Task 3: Duplicate Detection and Removal
+
+Duplicate records were analyzed to ensure the dataset contained only unique observations. Duplicate rows can introduce bias into data analysis and machine learning models by giving unnecessary weight to repeated information. Therefore, identifying and removing duplicates is an essential step in the data cleaning process.
+
+* **Detecting Duplicate Rows**
+  * The total number of duplicate records in the dataset was identified using the `df.duplicated().sum()` function. This function counts all rows that are exact duplicates of previous rows, allowing us to measure the extent of duplicate data in the dataset.
+
+* **Removing Duplicate Records**
+  * After identifying the duplicate rows, they were removed using the `df.drop_duplicates()` function. This operation retained only the first occurrence of each record and eliminated all subsequent duplicate entries, resulting in a cleaner and more reliable dataset.
+
+* **Reporting the Results**
+  * The number of duplicate rows removed was recorded and reported. Comparing the dataset shape before and after duplicate removal helped verify that the duplicate records had been successfully eliminated.
+
+* **Rechecking Missing Values**
+  * After removing duplicate rows, the percentage of missing values in each column was recalculated. This verification ensured that duplicate removal did not unintentionally alter the distribution of missing values or introduce any inconsistencies into the dataset.
+
+* **Outcome**
+  * The duplicate detection and removal process improved the overall quality and reliability of the dataset by eliminating redundant records. The cleaned dataset became more suitable for exploratory data analysis, feature engineering, and machine learning model training, reducing the risk of biased results caused by repeated observations.
+
