@@ -239,3 +239,26 @@ This matrix provided a numerical summary of the relationships among all numeric 
 
 * **Outcome**
   * The correlation heatmap provided valuable insights into the relationships between numeric features and helped identify strongly correlated variables. These findings will support feature selection, multicollinearity analysis, and machine learning model development in the next stages of the project while avoiding incorrect conclusions about causation.
+
+
+### Task 9a: Imputation Strategy Comparison
+
+An imputation strategy comparison was performed to determine the most appropriate method for handling missing values in the two most skewed numeric columns. Since skewed data can significantly influence the mean, both the **mean** and **median** were evaluated before selecting the final imputation strategy.
+
+* **Identifying the Most Skewed Columns**
+  * Based on the skewness analysis performed in Task 5, the two numeric columns with the highest absolute skewness were selected. These columns contained the most asymmetric distributions and therefore required careful consideration for missing value imputation.
+
+* **Comparing Mean and Median**
+  * For each selected column, both the **mean** and **median** values were calculated. The comparison helped determine how much the distribution was affected by extreme values (outliers). In highly skewed distributions, the mean is often pulled toward the long tail, whereas the median remains relatively stable.
+
+* **Justification for Choosing the Median**
+  * The **median** was selected as the preferred imputation method because it is less sensitive to outliers and skewed distributions. For positively skewed data, the mean is generally larger than the median, while for negatively skewed data, the mean is generally smaller than the median. Therefore, the median provides a more reliable estimate of the central tendency for replacing missing values in skewed numeric features.
+
+* **Applying Median Imputation**
+  * The missing values in the selected numeric columns were replaced with their respective median values using the `fillna()` function. This ensured that the missing entries were filled without significantly altering the original distribution of the data.
+
+* **Verification**
+  * After completing the imputation process, the dataset was checked again to confirm that no missing values remained in the selected columns. This verification ensured that the imputation was successfully applied and that the dataset was ready for further preprocessing and machine learning.
+
+* **Outcome**
+  * The comparison between mean and median demonstrated that the **median** is a more robust and reliable imputation strategy for skewed numeric data. The selected columns were successfully imputed, improving data quality while preserving the original characteristics of the dataset.
