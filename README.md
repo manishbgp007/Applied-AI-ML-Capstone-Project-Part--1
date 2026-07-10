@@ -211,3 +211,31 @@ Each visualization was carefully analyzed and explained in the README. The inter
 
 * **Outcome**
   * The visualizations provided valuable insights into the dataset and supported the findings from descriptive statistics and exploratory data analysis. They improved the understanding of feature distributions, relationships, and data quality, forming a strong foundation for feature engineering and machine learning model development in the subsequent parts of the project.
+
+
+### Task 8: Correlation Heatmap
+
+Correlation analysis was performed to measure the strength and direction of relationships between the numeric variables in the dataset. The Pearson correlation coefficient was calculated for all numeric features, and the results were visualized using a correlation heatmap. This analysis helped identify highly correlated features that may influence machine learning models and feature selection.
+
+* **Computing the Correlation Matrix**  
+The Pearson correlation matrix was calculated using the `df.corr()` function. The correlation coefficient ranges from **-1 to +1**, where:
+  * **+1** indicates a perfect positive correlation.
+  * **-1** indicates a perfect negative correlation.
+  * **0** indicates no linear relationship between the variables.
+
+This matrix provided a numerical summary of the relationships among all numeric features.
+
+* **Visualizing the Correlation Heatmap**
+  * The correlation matrix was visualized using a **heatmap**. Different colors represented different correlation strengths, making it easy to identify variables that were strongly positively or negatively correlated. The heatmap provided a clear overview of the relationships among all numeric features in the dataset.
+
+* **Identifying the Strongest Correlation Pair**
+  * The pair of numeric variables with the highest absolute correlation coefficient was identified from the correlation matrix. A strong positive correlation indicates that the two variables tend to increase or decrease together, while a strong negative correlation indicates that one variable increases as the other decreases.
+
+* **Correlation Does Not Imply Causation**
+  * Although two variables may have a strong correlation, this does **not** necessarily mean that one variable causes the other. Correlation only measures the strength of a linear relationship between variables and does not establish a cause-and-effect relationship.
+
+* **Possible Alternative Explanation**
+  * A strong correlation may be explained by the presence of a **third variable** that influences both features. For example, if **House Size** and **House Price** are highly correlated, the relationship may also be affected by factors such as **Location**, **Neighborhood Quality**, or **Number of Rooms**. Similarly, in other datasets, variables may appear strongly correlated because they are both influenced by another hidden factor rather than directly affecting each other.
+
+* **Outcome**
+  * The correlation heatmap provided valuable insights into the relationships between numeric features and helped identify strongly correlated variables. These findings will support feature selection, multicollinearity analysis, and machine learning model development in the next stages of the project while avoiding incorrect conclusions about causation.
