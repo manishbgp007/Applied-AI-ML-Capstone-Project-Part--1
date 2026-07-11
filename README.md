@@ -32,7 +32,7 @@
 ## Q: 1
 ### Part 1 — Data Acquisition, Cleaning, and Exploratory Analysis
 
-### Task 1: Dataset Inspection
+#### Task 1: Dataset Inspection
 The first step of the project was to inspect the dataset to understand its overall structure, quality, and suitability for machine learning. A thorough inspection helps identify potential issues before data preprocessing and model development.
 
 * **Loading the Dataset**
@@ -50,7 +50,7 @@ The first step of the project was to inspect the dataset to understand its overa
 * **Initial Dataset Assessment**
   * The inspection process confirmed that the dataset was successfully loaded and contained the expected number of features and observations. It also provided an initial understanding of the dataset's structure, allowing potential issues such as incorrect data types, missing values, or formatting inconsistencies to be identified before proceeding to data cleaning and exploratory data analysis.
 
-### Task 2: Null Value Analysis
+#### Task 2: Null Value Analysis
 
 Missing value analysis was performed to identify incomplete or unavailable data within the dataset. Handling missing values is an important preprocessing step because they can negatively affect the performance and accuracy of machine learning models.
 
@@ -72,7 +72,7 @@ Missing value analysis was performed to identify incomplete or unavailable data 
   * After imputing the missing values in the eligible numeric columns, the dataset became more complete and suitable for further preprocessing, exploratory data analysis, feature engineering, and machine learning model development.
  
 
-### Task 3: Duplicate Detection and Removal
+#### Task 3: Duplicate Detection and Removal
 
 Duplicate records were analyzed to ensure the dataset contained only unique observations. Duplicate rows can introduce bias into data analysis and machine learning models by giving unnecessary weight to repeated information. Therefore, identifying and removing duplicates is an essential step in the data cleaning process.
 
@@ -92,7 +92,7 @@ Duplicate records were analyzed to ensure the dataset contained only unique obse
   * The duplicate detection and removal process improved the overall quality and reliability of the dataset by eliminating redundant records. The cleaned dataset became more suitable for exploratory data analysis, feature engineering, and machine learning model training, reducing the risk of biased results caused by repeated observations.
 
 
-### Task 4: Data Type Correction
+#### Task 4: Data Type Correction
 
 Data type correction was performed to ensure that each column had the most appropriate data type for analysis and machine learning. Incorrect data types can lead to errors during preprocessing, increase memory usage, and reduce computational efficiency. Therefore, verifying and correcting data types is an important step in data preparation.
 
@@ -112,7 +112,7 @@ Data type correction was performed to ensure that each column had the most appro
   * After correcting the data types, the dataset became more efficient in terms of memory usage and computational performance. The corrected data types also ensured compatibility with subsequent preprocessing techniques, exploratory data analysis, feature engineering, and machine learning model development.
 
 
-### Task 5: Descriptive Statistics and Skewness Analysis
+#### Task 5: Descriptive Statistics and Skewness Analysis
 
 Descriptive statistics and skewness analysis were performed to understand the distribution, central tendency, variability, and shape of the numeric features in the dataset. This analysis provided valuable insights into the characteristics of the data and helped determine appropriate preprocessing techniques.
 
@@ -149,7 +149,7 @@ These statistics provided an overall understanding of the dataset and helped ide
   * The descriptive statistics and skewness analysis provided a comprehensive understanding of the dataset's numerical features. The results helped identify highly skewed variables, supported the choice of median imputation, and established a strong foundation for further exploratory data analysis, feature engineering, and machine learning model development.
  
 
-### Task 6: Outlier Detection Using the Interquartile Range (IQR)
+#### Task 6: Outlier Detection Using the Interquartile Range (IQR)
 
 Outlier detection was performed to identify unusually high or low values in the dataset that could influence statistical analysis and machine learning model performance. Instead of removing outliers immediately, they were carefully analyzed and documented for future preprocessing.
 
@@ -182,7 +182,7 @@ Any observation with a value below the lower bound or above the upper bound was 
   * The IQR-based outlier analysis successfully identified extreme observations while preserving the integrity of the original dataset. This approach ensures that the data remains complete during the initial exploration phase and allows informed decisions about outlier treatment in later stages of the project.
 
 
-### Task 7: Data Visualization
+#### Task 7: Data Visualization
 Data visualization was performed to better understand the distribution, trends, relationships, and patterns within the dataset. Visual representations make it easier to identify important insights that may not be obvious from numerical summaries alone. Five different types of plots were created as required by the project.
 
 * **Line Plot**
@@ -213,7 +213,7 @@ Each visualization was carefully analyzed and explained in the README. The inter
   * The visualizations provided valuable insights into the dataset and supported the findings from descriptive statistics and exploratory data analysis. They improved the understanding of feature distributions, relationships, and data quality, forming a strong foundation for feature engineering and machine learning model development in the subsequent parts of the project.
 
 
-### Task 8: Correlation Heatmap
+#### Task 8: Correlation Heatmap
 
 Correlation analysis was performed to measure the strength and direction of relationships between the numeric variables in the dataset. The Pearson correlation coefficient was calculated for all numeric features, and the results were visualized using a correlation heatmap. This analysis helped identify highly correlated features that may influence machine learning models and feature selection.
 
@@ -241,7 +241,7 @@ This matrix provided a numerical summary of the relationships among all numeric 
   * The correlation heatmap provided valuable insights into the relationships between numeric features and helped identify strongly correlated variables. These findings will support feature selection, multicollinearity analysis, and machine learning model development in the next stages of the project while avoiding incorrect conclusions about causation.
 
 
-### Task 9a: Imputation Strategy Comparison
+#### Task 9a: Imputation Strategy Comparison
 
 An imputation strategy comparison was performed to determine the most appropriate method for handling missing values in the two most skewed numeric columns. Since skewed data can significantly influence the mean, both the **mean** and **median** were evaluated before selecting the final imputation strategy.
 
@@ -264,7 +264,7 @@ An imputation strategy comparison was performed to determine the most appropriat
   * The comparison between mean and median demonstrated that the **median** is a more robust and reliable imputation strategy for skewed numeric data. The selected columns were successfully imputed, improving data quality while preserving the original characteristics of the dataset.
 
 
-### Task 9b: Spearman vs Pearson Correlation Analysis
+#### Task 9b: Spearman vs Pearson Correlation Analysis
 To better understand the relationships between numeric features, both **Pearson** and **Spearman** correlation coefficients were calculated and compared. This comparison helped identify whether the relationships between variables were linear or monotonic and provided valuable guidance for feature selection in the next stage of the project.
 
 * **Computing Pearson Correlation**
@@ -290,7 +290,7 @@ The identified feature pairs were interpreted based on their correlation values:
   * The comparison between Pearson and Spearman correlation provided valuable insights into the nature of the relationships among numeric variables. It highlighted feature pairs with non-linear but monotonic associations and supported the decision to use Spearman correlation for more reliable feature selection in the next phase of the machine learning pipeline.
  
 
-### Task 9c: Grouped Aggregation Analysis
+#### Task 9c: Grouped Aggregation Analysis
 
 Grouped aggregation was performed to analyze how the values of a numeric feature vary across different categories. This analysis helps identify whether a categorical feature has predictive power by comparing the statistical characteristics of each group.
 
@@ -320,10 +320,10 @@ These findings helped determine which categories showed the strongest average pe
   * The grouped aggregation analysis demonstrated how the numeric feature varied across different categories. By comparing the mean, standard deviation, and observation count for each group, the analysis highlighted important differences between categories. The calculated mean ratio further indicated whether the categorical variable possesses a meaningful predictive signal, making it a valuable candidate for feature engineering and model development in the next phase of the project.
 
 
-### Task 10: Saving the Cleaned Dataset
+#### Task 10: Saving the Cleaned Dataset
 After completing all data preprocessing tasks, including missing value handling, duplicate removal, data type correction, descriptive statistical analysis, outlier detection, correlation analysis, grouped aggregation, and visualization, the final cleaned dataset was prepared for future use.
 
-### 1. Exporting the Cleaned Dataset**
+### Exporting the Cleaned Dataset
   * The cleaned dataset was exported as a CSV file named **`cleaned_data.csv`** using the `to_csv()` function in pandas. This file contains the processed version of the original dataset and serves as the input for the next stages of the project.
 
 * **Purpose of Saving the Dataset**
