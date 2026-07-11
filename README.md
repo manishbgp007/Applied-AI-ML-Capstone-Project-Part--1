@@ -19,14 +19,14 @@
   * Includes categorical columns when extended with derived features (e.g., region bins).
   * Target variable MedHouseVal is continuous, suitable for regression, and can be binarized for classification tasks.
   * Publicly available and widely used for benchmarking ML models.
-    
-### Technologies Used
-* Python 3.9+
-* Google Colab
-* Pandas for data manipulation
-* NumPy for numerical operations
-* Matplotlib & Seaborn for visualizations
-* Scikit-learn for correlation, preprocessing, and ML models
+
+* Technologies Used
+  * Python 3.9+
+  * Google Colab
+  * Pandas for data manipulation
+  * NumPy for numerical operations
+  * Matplotlib & Seaborn for visualizations
+  * Scikit-learn for correlation, preprocessing, and ML models
 
 
 ## Q: 1
